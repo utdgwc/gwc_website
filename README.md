@@ -35,4 +35,4 @@ Thanks! 😊🩵
 
 If you are a student at UTD, you can offer your support by joining our club as a member by attending any of our events or applying to be a UTD GWC Officer! 
 
-If you are a company rep, we'd love to host an event with you, email us! 
+If you are a company rep, we'd love to host an event with you, email us at utdgirlswhocode@gmail.com! 
