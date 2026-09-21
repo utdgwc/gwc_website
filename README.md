@@ -4,18 +4,19 @@ Girls Who Code (GWC) is a national organization that is dedicated to lowering th
 
 ## UTD Girls Who Code
 
-UTD GWC is on a mission to create a community in the tech space for women who are college students! 🧡💚
+UTD GWC is on a mission to create a community in the tech space for women who are college students! 🧡💚🩵
 
 
 ### About
 
-This website serves as a professional display of what GWC is about and what we have to offer our community. It showcases our events, officers, and mission to companies and prospective members. 
+The fall '26 GWC Projects team are the designers behind this website! This website serves as a professional display of what GWC is about and what we have to offer our community. It showcases our events, officers, and mission to companies and prospective members. 
 
 ### Features
 
 Homepage
 Officers Page
-Events Page with embedded google calendar
+Projects Page
+Events Page with events calendar
 Contact form with sponsor packet
 Mobile and desktop responsive design
 
@@ -33,6 +34,6 @@ Web3Forms
 
 Thanks! 😊🩵 
 
-If you are a student at UTD, you can offer your support by joining our club as a member by attending any of our events or applying to be a UTD GWC Officer! 
+If you are a student at UTD, you can offer your support by joining our club as a member by attending any of our events, applying to be a UTD GWC Officer, or by applying to a project that GWC offers! 
 
-If you are a company rep, we'd love to host an event with you, email us at utdgirlswhocode@gmail.com! 
+If you are a company rep, we'd love to host an event with you, check out our website to see how you can get involved! 
