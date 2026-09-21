@@ -1,2 +1,41 @@
 # Github Guidelines for Projects Participants
 
+# For reference: 
+
+# repository: 
+# is where all the code for our project exists 
+# (think of project folder on github or on your computer) 
+
+# cloning a repo: 
+# download all the contents in a repo to your computer
+
+# branch: 
+# your own copy where you can work safely without
+# creating errors in the 'main' branch 
+
+# commit: 
+# save your changes with a note
+
+# push: 
+# send your changes to the github repo
+
+
+# merge: 
+# adding your changed to the main project
+
+
+# In this project, our main project will exist in the main branch
+
+# every time you want to add something to your portion of the project, 
+# you will create a branch. For the sake of simplicity, we'll have one 
+# branch assigned to each person in the team. 
+
+# Only once the code has been reviewed and verified that there are no errors, 
+# can you merge your code to the main branch. 
+# After merging your code to the main branch, your branch will not be deleted
+# so, you can continue adding code to your branch. 
+
+# Always write a clear commit message so the rest of the team knows what you're doing
+# and so that when you pick back up where you left off, you understand your code
+# and your progress. 
+
