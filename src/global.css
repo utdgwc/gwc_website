@@ -1,0 +1,52 @@
+/* 
+This is the global css document for all of GWC website
+
+Includes: 
+    - All colors in the GWC color scheme
+    - All fonts that are required to be used
+    - All spacing options
+
+How this page should be used:
+    - Style the nav bar and the footer
+    
+Other requirements: 
+    - Buttons should utilize the accent color (--accent)
+    - hovering over a button should use the accent light color (--accent-light)
+    - Paragraph color should be black (--text)
+    - Paragraph fonts and button fonts should be in Times New Roman 
+    - Header color can be primary dark or an accent color
+    - Header fonts should be in Poppins
+    - for cohesiveness, all pgs will use (--primary-bg) var
+
+*/
+
+:root {
+    /* All Colors */
+    --primary-bg: #4accc6;
+    --primary-dark: #275759;
+    --accent: #df7599;
+    --accent-light: #fcd3e3;
+    --background: #b7f4f9;
+    --surface: #FFFFFF;
+    --text: #000;
+
+    /* Fonts */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Times New Roman', Times, sans-serif;
+    
+    /* Spacing */
+    --space-sm: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 48px;
+    
+}
+
+/* All headers will be in the Poppins font */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+
+
+
