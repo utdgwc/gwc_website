@@ -1,23 +1,126 @@
-<!-- 
- 
-Owner: 
-
-Page Elements: 
-    1 - Grid of Fall '26 GWC Officers
-    2 - Grid of Projects Team
-
-Last Updated:  
-
--->
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GWC Officers</title>
+    <title>Officer's Page</title>
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: center;
+	    flex-direction: column;
+	    align-items: center;
+	    gap: 20px;
+            margin-top: 40px; 
+        }
+
+        .vertical-card {
+            width: 650px;            
+            height: 320px;           
+            background-color: white; 
+            border: 2px solid #ccc;
+            border-radius: 8px;      
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            gap: 20px;               
+            padding: 20px;
+        }
+
+        .vertical-card div {
+            text-align: center;
+        }
+
+        .vertical-card img {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .vertical-card figcaption {
+            margin-top: 8px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
+
+    <div style="display: flex; gap: 40px; justify-content: center">
+        <p>GWC</p>
+        <p>Home</p>
+        <p>Officers</p>
+        <p>Projects</p>
+        <p>Events</p>
+        <p>Contact Us</p>
+    </div>
+
+    <h1 style="text-align: center;">Meet the Officers!</h1>
+
+    <div class="card-container">
+                 <img src="groupphoto.jpg" alt="First Image">
+    </div>
     
+    <div class="card-container">
+        <div class="vertical-card">
+            <div>
+                 <img src="image1.jpg" alt="First Image">
+                 <figcaption>President</figcaption>
+            </div>
+            <div>
+                 <img src="image1.jpg" alt="Second Image">
+                 <figcaption>Vice President</figcaption>
+            </div>
+            <div>
+                 <img src="image1.jpg" alt="Third Image">
+                 <figcaption>Secretary</figcaption>
+            </div>
+	    <div>
+                 <img src="image1.jpg" alt="Third Image">
+                 <figcaption>Graphic Designer</figcaption>
+            </div>
+	</div>
+        <div class="vertical-card">
+	    <div>
+                 <img src="image1.jpg" alt="Third Image">
+                 <figcaption>Marketing Lead</figcaption>
+            </div>
+            <div>
+                 <img src="image1.jpg" alt="First Image">
+                 <figcaption>Social Media Coordinator</figcaption>
+            </div>
+            <div>
+                 <img src="image1.jpg" alt="Second Image">
+                 <figcaption>Outreach Coordinator</figcaption>
+            </div>
+            <div>
+                 <img src="image1.jpg" alt="Third Image">
+                 <figcaption>Events Coordinator</figcaption>
+            </div>
+            
+        </div>
+	<div class="vertical-card">
+	    <div>
+                 <img src="image1.jpg" alt="Third Image">
+                 <figcaption>Public Relations Coordinator</figcaption>
+            </div>
+	    <div>
+                 <img src="image1.jpg" alt="Third Image">
+                 <figcaption>Tech Lead</figcaption>
+            </div>
+            <div>
+                 <img src="image1.jpg" alt="First Image">
+                 <figcaption>Events Coordinator</figcaption>
+            </div>
+            <div>
+                 <img src="image1.jpg" alt="Third Image">
+                 <figcaption>Tech Lead</figcaption>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
 </body>
 </html>
