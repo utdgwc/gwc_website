@@ -1,26 +1,206 @@
-<!-- 
- 
-Owner: 
-
-Page Elements: 
-    1 - Carosel of picture from past/popular events
-    2 - some numbers regarding how many folks attend our events  
-    3 - blurb about our club and types of events
-    4 - Meet the team that makes this possible button
-    5 - blurb about projects
-
-Last Updated:  
-
--->
-
-<!DOCTYPE html>
+<!DOCTYPE html> 
+<!-- The document uses HTML and its content is in English. -->
 <html lang="en">
+<!-- Page settings: character encoding, mobile sizing, and browser-tab title. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Girls Who Code | UT Dallas</title>
+    <!-- Reusable CSS for the carousel, buttons, links, and keyboard focus. -->
+    <style>
+        /* Scroll sideways to move between photos; each photo snaps into place. */
+        .photo-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+        }
+        /* Each slide fills the carousel width and snaps to its left edge. */
+        .photo-carousel figure {
+            flex: 0 0 100%;
+            min-width: 0;
+            margin: 0;
+            scroll-snap-align: start;
+        }
+        /* Photos fill their slides without stretching. */
+        .photo-carousel img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        /* Shared appearance for the calendar and projects buttons. */
+        .action-button {
+            padding: 14px 28px;
+            border: 1px solid #275759;
+            background-color: #FCD3E3;
+            color: #275759;
+            font: inherit;
+        }
+        /* Show a not-allowed cursor while a button has no destination. */
+        .action-button:disabled { cursor: not-allowed; }
+        /* Set the text color of links. */
+        a { color: #275759; }
+        /* Make keyboard focus visible on links and the carousel. */
+        a:focus-visible, .photo-carousel:focus-visible {
+            outline: 3px solid #275759;
+            outline-offset: 4px;
+        }
+    </style>
 </head>
-<body>
-    
+<!-- Default page font, text size, text color, and background. -->
+<body style="margin: 0; font-family: 'Times New Roman', Times, serif; font-size: 18px; color: #275759; background-color: #FCD3E3;">
+    <!-- Top header: a left-aligned logo with a rose divider underneath. -->
+    <header id="home" style="padding: 16px; background-color: white; border-bottom: 6px solid #DF7599;">
+        <!-- A full-width layout table holds the logo. -->
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+                <td width="10%" align="left">
+                    <!-- Hide the extra white space built into the logo image. -->
+                    <div style="width: 100px; height: 50px; overflow: hidden;">
+                        <img src="../imgs/gwc-white-bg.png" alt="Girls Who Code at the University of Texas at Dallas logo" width="200" height="200" style="margin-left: -58px; margin-top: -78px;">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <!-- Main page content, from the introduction to the partners. -->
+    <main>
+        <!-- The background fills the banner; the dark layer makes the text readable. -->
+        <section style="background-image: linear-gradient(rgba(39, 87, 89, 0.65), rgba(39, 87, 89, 0.65)), url('../imgs/gwc-group-photo.jpg'); background-size: cover; background-position: center; text-align: center; color: white; padding: 150px 24px; border-bottom: 6px solid #DF7599;">
+            <!-- Main mission heading, italicized and centered over the photo. -->
+            <h1 style="font-style: italic; font-size: 42px; line-height: 1.3; max-width: 850px; margin: 0 auto;">GWC is committed to bridging the gender gap in tech</h1>
+            <!-- University name below the main heading. -->
+            <p style="font-size: 22px; margin-top: 28px; color: #FCD3E3;">The University of Texas at Dallas</p>
+        </section>
+
+        <!-- Separate table rows stack the following sections vertically. -->
+        <table width="100%" cellpadding="30" cellspacing="0" role="presentation" style="table-layout: fixed;">
+            <tr>
+                <td colspan="2" align="center" style="padding: 0;">
+                    <!-- About GWC: photo and club introduction, wrapping on smaller screens. -->
+                    <section id="about" style="display: flex; flex-wrap: wrap; align-items: center; background-color: #FCD3E3; text-align: left;">
+                        <!-- About photo: grows with its column and keeps its proportions. -->
+                        <div style="flex: 1 1 350px;">
+                            <img src="../imgs/gwc-about-photo.jpg" alt="GWC group posing together on outdoor steps" style="display: block; width: 100%; height: auto;">
+                        </div>
+                        <!-- Club description and link to the national organization. -->
+                        <div style="flex: 1 1 350px; padding: 50px 35px; box-sizing: border-box;">
+                            <h2 style="font-size: 36px; margin-top: 0;">About GWC</h2>
+                            <hr style="width: 60px; margin-left: 0; border: 0; border-top: 3px solid #DF7599;">
+                            <p style="font-size: 22px; line-height: 1.6;">Girls Who Code is committed to bridging the gender gap in tech.</p>
+                            <p style="line-height: 1.6;">Our UT Dallas club brings students together to learn, build, and find a community in technology.</p>
+                            <a href="https://girlswhocode.com/">Visit the national Girls Who Code website</a>
+                        </div>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="padding: 60px 24px;">
+                    <!-- Past events: a photo carousel followed by attendance placeholders. -->
+                    <section id="past-events" style="max-width: 950px; margin: auto;">
+                        <h2 style="font-size: 30px;">Moments from Our Events</h2>
+                        <!-- Replace or add photos here as event details become available. -->
+                        <div class="photo-carousel" tabindex="0" role="region" aria-label="GWC photo carousel">
+                            <!-- Carousel photo 1: move this figure block to change its order. -->
+                            <figure>
+                                <img src="../imgs/gwc-community-3281.jpg" alt="Students seated together at the Girls Who Code kickoff" loading="lazy">
+                            </figure>
+                            <!-- Carousel photo 2: move this figure block to change its order. -->
+                            <figure>
+                                <img src="../imgs/gwc-community-3301.jpg" alt="Members preparing drinks together at a GWC gathering" loading="lazy">
+                            </figure>
+                            <!-- Carousel photo 3: move this figure block to change its order. -->
+                            <figure>
+                                <img src="../imgs/gwc-community-3316.jpg" alt="Three attendees smiling together at a GWC event" loading="lazy">
+                            </figure>
+                            <!-- Carousel photo 4: move this figure block to change its order. -->
+                            <figure>
+                                <img src="../imgs/gwc-community-1820.jpg" alt="Attendees chatting and sharing food at a GWC event" loading="lazy">
+                            </figure>
+                        </div>
+                        <!-- Replace these placeholders with verified attendance figures. -->
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 24px;">
+                            <div><strong style="font-size: 28px;">Coming soon</strong><p>Average attendees per event</p></div>
+                            <div><strong style="font-size: 28px;">Coming soon</strong><p>Total event attendance this semester</p></div>
+                        </div>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" valign="top" style="padding: 80px 30px; background-color: #B7F4F9; border-top: 4px solid #DF7599;">
+                    <!-- Workshops and upcoming events, with a future calendar link. -->
+                    <section id="calendar">
+                        <h2 style="font-size: 30px;">Our Upcoming Events</h2>
+                        <p style="max-width: 700px; margin: 24px auto; line-height: 1.6;">From hands-on coding workshops to exploring tools like AI and prompt engineering, our events bring students together to practice skills, share ideas, and connect with others interested in tech.</p>
+                        <!-- Replace this disabled button with a link when the calendar URL is ready. -->
+                        <button class="action-button" type="button" disabled aria-describedby="calendar-status">View our calendar</button>
+                        <p id="calendar-status">Calendar link coming soon.</p>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" valign="top" style="padding: 80px 30px; background-color: #B7F4F9; border-top: 4px solid #DF7599;">
+                    <!-- Student-led projects and a future projects website link. -->
+                    <section id="projects">
+                        <h2 style="font-size: 30px;">About Our Projects</h2>
+                        <p style="max-width: 700px; margin: 24px auto; line-height: 1.6;">At GWC, we don't just learn about tech, we build with it. Our projects are student-led initiatives that give members hands-on experience with real tools and real teamwork.</p>
+                        <!-- Replace this disabled button with a link when the projects URL is ready. -->
+                        <button class="action-button" type="button" disabled aria-describedby="projects-status">Explore our projects</button>
+                        <p id="projects-status">Projects website coming soon.</p>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <hr style="border: 0; border-top: 2px solid #DF7599;">
+                    <!-- Officer names, photos, and positions to fill in later. -->
+                    <section id="officers">
+                        <h2 style="font-size: 30px;">Meet the Officers</h2>
+                        <!-- One row places the placeholders beside each other. -->
+                        <table width="100%" cellpadding="20" role="presentation">
+                            <tr>
+                                <td align="center">
+                                    <p>[Officer picture]</p>
+                                    <h3>[Officer name]</h3>
+                                    <p>[Position]</p>
+                                </td>
+                                <td align="center">
+                                    <p>[Officer picture]</p>
+                                    <h3>[Officer name]</h3>
+                                    <p>[Position]</p>
+                                </td>
+                                <td align="center">
+                                    <p>[Officer picture]</p>
+                                    <h3>[Officer name]</h3>
+                                    <p>[Position]</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- Add an officers page link when it is available. -->
+                        <p>View more</p>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="background-color: #B7F4F9; border-top: 4px solid #DF7599;">
+                    <!-- Partner logos to fill in later. -->
+                    <section id="partners">
+                        <h2 style="font-size: 30px;">Partners</h2>
+                        <!-- One row places the placeholders beside each other. -->
+                        <table width="100%" cellpadding="20" role="presentation">
+                            <tr>
+                                <td align="center">[Partner logo]</td>
+                                <td align="center">[Partner logo]</td>
+                                <td align="center">[Partner logo]</td>
+                                <td align="center">[Partner logo]</td>
+                            </tr>
+                        </table>
+                    </section>
+                </td>
+            </tr>
+        </table>
+    </main>
+
 </body>
 </html>
