@@ -1,23 +1,123 @@
-<!-- 
- 
-Owner: 
 
-Page Elements: 
-    1 - Contact us form
-    2 - Sponsor Packet
+<!--
+Owner: Veda Manchana
 
-Last Updated:  
+Page Elements:
+    1 - Contact Us Introduction
+    2 - Get in Touch Form
+    3 - Partner With Us / Sponsor Packet
 
+Last Updated: 10/15/26
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us | UTD Girls Who Code</title>
 </head>
+
 <body>
-    
+
+    <main>
+
+        <!-- Contact Us Introduction -->
+        <section class="contact-intro">
+            <h1>CONTACT US</h1>
+
+            <p>
+                Have a question, want to collaborate, or interested
+                in partnering with Girls Who Code at UT Dallas?
+                We'd love to hear from you!
+            </p>
+        </section>
+
+        <!-- Get in Touch Section -->
+        <section class="get-in-touch">
+            <h2>GET IN TOUCH</h2>
+
+            <p>
+                Send us a message and we'll get back to you!
+            </p>
+
+            <!-- Contact Form -->
+            <!-- Web3Forms integration will be added later -->
+            <form class="contact-form" id="contact-form">
+
+                <!-- Name Field -->
+                <p class="form-group">
+                    <label for="name">Name</label>
+                    <br>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required
+                    >
+                </p>
+
+                <!-- Email Field -->
+                <p class="form-group">
+                    <label for="email">Email</label>
+                    <br>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </p>
+
+                <!-- Message Field -->
+                <p class="form-group">
+                    <label for="message">Message</label>
+                    <br>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        cols="40"
+                        placeholder="Enter your message"
+                        required
+                    ></textarea>
+                </p>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">
+                    Send Message
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Partner With Us Section -->
+        <section class="partner-with-us">
+            <h2>PARTNER WITH US</h2>
+
+            <p>
+                Interested in sponsoring or collaborating with
+                Girls Who Code at UT Dallas? Partner with us
+                to support our events, workshops, and initiatives
+                while connecting with a community of students
+                passionate about technology.
+            </p>
+
+            <!-- Sponsor Packet Link -->
+            <!-- Replace # with the actual sponsor packet URL -->
+            <a href="#" class="sponsor-packet-button">
+                View Sponsor Packet
+            </a>
+
+        </section>
+
+    </main>
+
 </body>
+
 </html>
