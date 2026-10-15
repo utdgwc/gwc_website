@@ -1,11 +1,62 @@
+
+<!--
+Owner: Veda Manchana
+
+Page Elements:
+    1 - GWC Logo
+    2 - Navigation Links
+    3 - Mobile Hamburger Menu
+
+Last Updated: 10/15/26
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
 </head>
+
 <body>
-    
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <nav class="main-navigation" aria-label="Main navigation">
+
+            <!-- GWC Logo -->
+            <!-- GWC Logo -->
+            <a href="index.html" class="nav-logo">
+                <img src="../imgs/logos/GWC white bg.png"
+                    alt="UTD Girls Who Code Logo"
+                    width="80">
+            </a>
+
+            <!-- Navigation Links -->
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="officers.html">Officers</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact_form.html">Contact Us</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Menu -->
+            <!-- Functionality will be added using JavaScript later -->
+            <button
+                type="button"
+                class="menu-toggle"
+                aria-label="Toggle navigation menu"
+                aria-controls="nav-links"
+                aria-expanded="false"
+            >
+                &#9776;
+            </button>
+
+        </nav>
+    </header>
+
 </body>
+
 </html>
