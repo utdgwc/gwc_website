@@ -1,0 +1,448 @@
+/*
+ * Projects CSS file contains styles for the projects section of the website.
+ * Hero Section, First Project Section, Skills Section, Future Project Section, Ongoing Projects Section, FAQ, Timeline, and Idea Proposal Section are all styled in this file.
+ * Nav bar to be placed at the top of the page when ready.
+ */
+
+ /* Body contains styles for overall page layout and typography. */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    background-color: var(--primary-bg);
+    color: var(--text);
+    font-variant: condensed;
+}
+
+/* Hero section contains styles for the overall top section of the page with the page heading, description, and cta. */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    padding: var(--space-lg);
+}
+
+/*Hero content will be split into two sections, the text and the image. The text will be on the left and the image will be on the right. */
+.hero-content {
+    width: 50%;
+}
+
+/*Hero text styles for H1 make it stand out and be the main focus of the page. The paragraph text is smaller and less prominent. */
+.hero-text h1 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-sm);
+}
+
+/* Hero text paragraph styles for the description of the page. The text is smaller and less prominent than the heading. The text is also limited to a max width for better readability. */
+.hero-text p{
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-bottom: var(--space-md);
+}
+
+/* Hero button styles for the call-to-action button in the hero section. */
+.hero-button {
+    background-color: var(--accent);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: var(--space-sm) var(--space-md);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hero button hover styles for the call-to-action button in the hero section. The background color changes to the accent light color on hover. */
+.hero-button:hover {
+    background-color: var(--accent-light);
+}
+
+/* Hero image styles for the image in the hero section. The image is responsive and will scale down on smaller screens. */
+.hero-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Hero image img styles for the image in the hero section. The image is responsive and has a border radius for rounded corners. */
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* First project section styles for the section that contains the first project images. */
+.first-project-section {
+    padding: var(--space-md) var(--space-lg);
+    text-align: center;
+}
+
+/* First project section h2 styles for the heading of the first project section. The heading is centered and has a margin for spacing. */
+.first-project-section h2 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+/* Project gallery styles for the container that holds the project cards. The gallery is a flex container and contains polaroid cards. */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+/* Polaroid card styles for the individual project cards. The cards have a white background, padding, and a box shadow for a polaroid effect. */
+.polaroid-card {
+    background-color: var(--surface);
+    width: 200px;
+    height: 250px;
+    padding: var(--space-sm);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Polaroid card hover styles for the individual project cards. The cards scale up and have a larger box shadow on hover for a polaroid effect. */
+.polaroid-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Polaroid card img styles for the images inside the polaroid cards. The images are responsive and have rounded corners. */
+.polaroid-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: var(--space-sm);
+}
+
+/* Skills section styles for the section that contains the skills information. The section is centered and has padding for spacing. */
+.skills-section {
+    padding: var(--space-md) var(--space-lg);
+    text-align: center;
+}
+
+.skills-section h2 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.skill-card {
+    background-color: var(--background);
+    padding: var(--space-md);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.skill-card p {
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.upcoming-projects-section {
+    padding: var(--space-md) var(--space-lg);
+    text-align: center;
+}
+
+.upcoming-projects-section h2 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.upcoming-projects {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.project-card {
+    background-color: var(--surface);
+    padding: var(--space-md);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.project-header h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+.project-date {
+    border: 1px solid var(--primary-dark);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-family: var(--font-body);
+    font-weight: semi-bold;
+    color: var(--primary-dark);
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.project-card p {
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 16px;
+    margin-bottom: var(--space-sm);
+}
+
+.project-button {
+    display:block;
+    background-color: var(--accent);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: var(--space-sm);
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.project-button:hover {
+    background-color: var(--accent-light);
+}
+
+.ongoing-projects-section {
+    padding: var(--space-md) var(--space-lg);
+    text-align: center;
+}
+
+.ongoing-projects-section h2 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.ongoing-projects {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.ongoing-project-date {
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-family: var(--font-body);
+    font-weight: semi-bold;
+    color: var(--accent);
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.faq-section {
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+}
+
+.faq-section h2 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.faq {
+    margin-bottom: var(--space-md);
+    display:flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.faq details {
+    background-color: var(--background);
+    padding: var(--space-sm);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: var(--text);
+    font-family: var(--font-body);
+}
+
+.faq summary {
+    font-family: var(--font-body);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.faq details p {
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 16px;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.projects-timeline-section {
+    padding: var(--space-lg);
+    text-align: left;
+}
+
+.projects-timeline-section h2 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-sm);
+}
+
+.projects-timeline-section p {
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 18px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: var(--space-md);
+    width: 100%;
+    padding: var(--space-md);
+    margin: 0 auto;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.timeline ul::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--primary-dark);
+    transform: translateX(-50%);
+}
+
+.timeline li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 60px;
+    margin-bottom: var(--space-md);
+    text-align: left;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    background-color: var(--surface);
+    border: 4px solid var(--primary-dark);
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.timeline-stage {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.timeline-date {
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 18px;
+    margin-left: var(--space-md);
+    margin-right: var(--space-md);
+    white-space: nowrap;
+}
+
+.propose-ideas-section {
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
+    text-align: center;
+    background-color: var(--background);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.propose-ideas-section h2 {
+    color: var(--primary-dark);
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-sm);
+}
+
+.propose-ideas-section p {
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 0 auto var(--space-md);
+    text-align: center;
+}
+
+.propose-button {
+    background-color: var(--accent);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    padding: var(--space-sm) var(--space-md);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: var(--space-md);
+}
+
+.propose-button:hover {
+    background-color: var(--accent-light);
+}
+
