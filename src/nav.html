@@ -1,33 +1,17 @@
-<<<<<<< HEAD
 
 <!--
 Owner: Veda Manchana
 
 Page Elements:
     1 - GWC Logo
-    2 - Navigation Links
-    3 - Mobile Hamburger Menu
+    2 - Home Link (first)
+    3 - Officers Link
+    4 - Events Link
+    5 - Projects Link
+    6 - Contact Us Link (last)
+    7 - Mobile Hamburger Menu
 
-Last Updated: 10/15/26
-=======
-<!-- 
- 
-Owner: 
-
-Page Elements
-    1 - GWC logo
-    2 - Homepage - link to homepage (must be first!)
-    3 - Officers page - link to officers page
-    4 - Events page - link to events page
-    5 - Projects page - link to projects page
-    6 - Contact page - link to contact page (must be last)
-    7 - Hamburger menu for mobile devices only! 
-    (on tablets and computers the nav bar should show)
-
-
-Last Updated:  
-
->>>>>>> main
+Last Updated: 10/28/26
 -->
 
 <!DOCTYPE html>
@@ -36,8 +20,9 @@ Last Updated:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar | UTD Girls Who Code</title>
     <link rel="stylesheet" href="global.css">
-    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
@@ -47,24 +32,15 @@ Last Updated:
         <nav class="main-navigation" aria-label="Main navigation">
 
             <!-- GWC Logo -->
-            <!-- GWC Logo -->
             <a href="index.html" class="nav-logo">
-                <img src="../imgs/logos/GWC white bg.png"
+                <img
+                    src="../imgs/logos/GWC white bg.png"
                     alt="UTD Girls Who Code Logo"
-                    width="80">
+                    width="80"
+                >
             </a>
 
-            <!-- Navigation Links -->
-            <ul id="nav-links" class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="officers.html">Officers</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact_form.html">Contact Us</a></li>
-            </ul>
-
             <!-- Mobile Hamburger Menu -->
-            <!-- Functionality will be added using JavaScript later -->
             <button
                 type="button"
                 class="menu-toggle"
@@ -75,8 +51,19 @@ Last Updated:
                 &#9776;
             </button>
 
+            <!-- Navigation Links -->
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="officers.html">Officers</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact_form.html">Contact Us</a></li>
+            </ul>
+
         </nav>
     </header>
+
+    <script src="nav.js" defer></script>
 
 </body>
 

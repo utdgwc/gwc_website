@@ -1,0 +1,108 @@
+
+/* Contact Us page */
+
+body {
+    margin: 0;
+    background-color: var(--primary-bg);
+    color: var(--text);
+    font-family: var(--font-body);
+}
+
+.contact-intro {
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.contact-intro h1 {
+    color: var(--primary-dark);
+    font-size: 36px;
+}
+
+.contact-intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.get-in-touch {
+    background-color: var(--surface);
+    padding: 48px 20px;
+}
+
+.get-in-touch h2,
+.partner-with-us h2 {
+    color: var(--primary-dark);
+}
+
+.get-in-touch h2,
+.get-in-touch > p,
+.contact-form {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button,
+.sponsor-packet-button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.sponsor-packet-button:hover {
+    background-color: var(--accent-light);
+}
+
+.partner-with-us {
+    background-color: var(--background);
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.partner-with-us p {
+    max-width: 650px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .contact-intro h1 {
+        font-size: 44px;
+    }
+
+    .get-in-touch {
+        padding: 48px 10%;
+    }
+}
