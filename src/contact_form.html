@@ -1,25 +1,70 @@
-<!-- 
- 
-Owner: 
 
-Page Elements: 
-    1 - Contact us form
-    2 - Sponsor Packet
+<!--
+Owner: Veda Manchana
 
-Last Updated:  
+Page Elements:
+    1 - GWC Logo
+    2 - Home Link (first)
+    3 - Officers Link
+    4 - Events Link
+    5 - Projects Link
+    6 - Contact Us Link (last)
+    7 - Mobile Hamburger Menu
 
+Last Updated: 10/28/26
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar | UTD Girls Who Code</title>
     <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="contact.css">
-    <title>Contact Us</title>
+    <link rel="stylesheet" href="nav.css">
 </head>
+
 <body>
-    
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <nav class="main-navigation" aria-label="Main navigation">
+
+            <!-- GWC Logo -->
+            <a href="index.html" class="nav-logo">
+                <img
+                    src="../imgs/logos/GWC white bg.png"
+                    alt="UTD Girls Who Code Logo"
+                    width="80"
+                >
+            </a>
+
+            <!-- Mobile Hamburger Menu -->
+            <button
+                type="button"
+                class="menu-toggle"
+                aria-label="Toggle navigation menu"
+                aria-controls="nav-links"
+                aria-expanded="false"
+            >
+                &#9776;
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="officers.html">Officers</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact_form.html">Contact Us</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <script src="nav.js" defer></script>
+
 </body>
+
 </html>
