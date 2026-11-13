@@ -129,11 +129,24 @@ nextBtn.addEventListener("click", goToNextMonth);
 // Phase 2: try to load events from events.json, then re-render.
 // If the file is missing (or you open the page with file://), the
 // fallback events above are used instead.
+
 async function loadEvents() {
   try {
-    const response = await fetch("events.json");
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    events = await response.json();
+    const { data, error } = await db
+      .from("events")
+      .select("id, title, starts_at")
+      .eq("cancelled", false)
+      .order("starts_at");
+    if (error) throw error;
+
+    // Convert each database row into the { date, title } shape the calendar uses
+    events = data.map((e) => {
+      const d = new Date(e.starts_at);
+      return {
+        date: toDateString(d.getFullYear(), d.getMonth(), d.getDate()),
+        title: e.title,
+      };
+    });
   } catch (err) {
     console.warn("Using built-in test events:", err.message);
   }
